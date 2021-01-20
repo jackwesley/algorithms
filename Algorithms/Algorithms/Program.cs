@@ -8,13 +8,10 @@ namespace Algorithms
         {
             Console.WriteLine("Hello World!");
 
-            var array = new int[] { 7, 6, 4, -1, 1, 2 };
+            var array = new int[] { 1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19 };
 
 
-
-            var target = 16;
-
-            var response = FourSum.SumOn2(array, target);
+            var response = SubArraySort.Sort(array);
 
             foreach (var res in response)
             {
