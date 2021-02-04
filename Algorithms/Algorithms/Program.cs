@@ -1,24 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Algorithms
 {
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
 
-            var array = new int[] { 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1 };
+            int[] array = { 1, 1, 1, 3, 3, 5, 6, 7, 8, 9, 10 };
+            var response = TopKMostFrequentElements.On(array, 2);
 
+            Console.WriteLine("Response: [ " + string.Join(",", response) + " ]");
 
-            var response = LongestSubArray.Find(array, 3);
-
-            Console.WriteLine(response);
-
-            //foreach (var res in response)
-            //{
-            //    Console.WriteLine("Response: [ " + string.Join(",", res) + " ]");
-            //}
         }
+
+       
     }
 }
