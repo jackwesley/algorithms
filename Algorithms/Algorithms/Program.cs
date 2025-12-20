@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Algorithms.ArraysStudy;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+
 
 namespace Algorithms
 {
@@ -8,19 +9,19 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
+            Arrays.RemoveDuplicates();
 
             string[,] array2D = new string[,] {
                                     { "A", "B", "C", "E"},
                                     { "S", "F", "C", "S"},
                                     { "A", "D", "E", "E"} };
 
-            WordSearch.Board = array2D;
 
-            var response = WordSearch.Search(new string[] { "A", "B", "C", "C", "E", "D" });
+            //WordSearch.Board = array2D;
 
-            Console.WriteLine("Response: [ " + string.Join(",", response) + " ]");
+            //var response = WordSearch.Search(new string[] { "A", "B", "C", "C", "E", "D" });
+
+            //Console.WriteLine("Response: [ " + string.Join(",", response) + " ]");
 
         }
 

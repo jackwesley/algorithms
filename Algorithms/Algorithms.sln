@@ -1,9 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{4AFC518B-EC34-4FE0-81EE-73A1536EB4CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{4AFC518B-EC34-4FE0-81EE-73A1536EB4CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KnownAlgorithms", "KnownAlgorithms", "{AF6C7E2E-F5ED-404D-AAD4-04CC92A04EBD}"
+	ProjectSection(SolutionItems) = preProject
+		Algorithms\BubbleSort.cs = Algorithms\BubbleSort.cs
+		Algorithms\DepthFirstSearch.cs = Algorithms\DepthFirstSearch.cs
+		Algorithms\Fibonacci.cs = Algorithms\Fibonacci.cs
+		Algorithms\FourSum.cs = Algorithms\FourSum.cs
+		Algorithms\LongestSubArray.cs = Algorithms\LongestSubArray.cs
+		Algorithms\Palindrome.cs = Algorithms\Palindrome.cs
+		Algorithms\SerializerTextJson.cs = Algorithms\SerializerTextJson.cs
+		Algorithms\SubArraySort.cs = Algorithms\SubArraySort.cs
+		Algorithms\ThreeSum.cs = Algorithms\ThreeSum.cs
+		Algorithms\TopKMostFrequentElements.cs = Algorithms\TopKMostFrequentElements.cs
+		Algorithms\TwoSum.cs = Algorithms\TwoSum.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
