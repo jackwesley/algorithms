@@ -182,9 +182,10 @@ namespace Algorithms.ArraysStudy
             Console.WriteLine(slow);
         }
         /// <summary>
+        /// Sliding window
         /// Given an array of positive integers nums and a target number, find the smallest size of a contiguous subarray whose sum is ≥ target.
         /// If it does not exist, return 0.
-
+        ///
         /// </summary>
         public static void MinSubArray()
         {
@@ -207,7 +208,8 @@ namespace Algorithms.ArraysStudy
             }
             Console.WriteLine(minLenght);
         }
-        /// <summary>
+        /// <summary> 
+        /// Sliding Window
         /// Longest Subarray With Sum ≤ K
         /// Statement
         /// Given an array of positive integers nums and an integer k, find the largest size of a contiguous subarray whose sum is less than or equal to k.
