@@ -9,7 +9,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Arrays.RemoveDuplicates();
+            Arrays.MaxSubArray();
 
             string[,] array2D = new string[,] {
                                     { "A", "B", "C", "E"},

@@ -192,6 +192,36 @@ public int RemoveDuplicates(int[] nums)
 
 ------------------------------------------------------------------------
 
+## Sliding Window
+LeetCode 209 — Minimum Size Subarray Sum
+
+Given an array of positive integers nums and a target number, find the smallest size of a contiguous subarray whose sum is ≥ target.
+If it does not exist, return 0.
+
+``` csharp
+public int MinSubArrayLen(int target, int[] nums)
+{
+    int left = 0;
+    int sum = 0;
+    int minLength = int.MaxValue;
+
+    for (int right = 0; right < nums.Length; right++)
+    {
+        sum += nums[right];
+
+        while (sum >= target)
+        {
+            minLength = Math.Min(minLength, right - left + 1);
+            sum -= nums[left];
+            left++;
+        }
+    }
+
+    return minLength == int.MaxValue ? 0 : minLength;
+}
+```
+------------------------------------------------------------------------
+
 ## Summary
 
 -   Arrays and loops are the foundation

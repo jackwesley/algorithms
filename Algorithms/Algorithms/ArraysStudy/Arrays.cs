@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Xml;
@@ -44,7 +46,7 @@ namespace Algorithms.ArraysStudy
         public static void TwoSumsToGetTargetOptimized()
         {
             Dictionary<int, int> map = new Dictionary<int, int>();
-            int[] arr = { 1, 2, 3, 4, 5 };
+            int[] arr = { 2, 7, 11, 15, 5 };
             int target = 9;
 
             for (int i = 0; i < arr.Length; i++)
@@ -171,6 +173,7 @@ namespace Algorithms.ArraysStudy
             {
                 if (nums[fast] != nums[fast - 1])
                 {
+                    //Add value of nums[fast] to position nums[slow]
                     nums[slow] = nums[fast];
                     slow++;
                 }
@@ -178,6 +181,60 @@ namespace Algorithms.ArraysStudy
 
             Console.WriteLine(slow);
         }
+        /// <summary>
+        /// Given an array of positive integers nums and a target number, find the smallest size of a contiguous subarray whose sum is ≥ target.
+        /// If it does not exist, return 0.
 
+        /// </summary>
+        public static void MinSubArray()
+        {
+            int[] nums = { 2, 3, 1, 2, 4, 3 };
+            int target = 7;
+            int sum = 0;
+            int left = 0;
+            int minLenght = int.MaxValue;
+
+
+            for (int right = 0; right < nums.Length; right++)
+            {
+                sum += nums[right];
+                while (sum >= target)
+                {
+                    minLenght = Math.Min(minLenght, right - left + 1);
+                    sum = sum - nums[left];
+                    left++;
+                }
+            }
+            Console.WriteLine(minLenght);
+        }
+        /// <summary>
+        /// Longest Subarray With Sum ≤ K
+        /// Statement
+        /// Given an array of positive integers nums and an integer k, find the largest size of a contiguous subarray whose sum is less than or equal to k.
+        /// Return only the size.
+        /// </summary>
+
+        public static void MaxSubArray()
+        {
+            int[] nums = { 1, 2, 3, 4, 5 };
+            int target = 4;
+            int sum = 0;
+            int maxLenght = 0;
+            int left = 0;
+
+            for (int right = 0; right < nums.Length; right++)
+            {
+                sum += nums[right];
+                while (sum > target)
+                {
+                    sum = sum - nums[left];
+                    left++;
+                }
+
+                maxLenght = Math.Max(maxLenght, right - left + 1);
+            }
+
+            Console.WriteLine(maxLenght);
+        }
     }
 }
